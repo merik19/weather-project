@@ -16,69 +16,66 @@
   </head>
   <body>
     <div class="container">
-      <form class="city-search" id="search-form">
+      <div class="weather-app">
+        <form class="city-search" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input type="search" placeholder="Enter city" id="city-input" />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary w-100"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-success w-100"
+                id="current-location-button"
+              >
+                Current
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <h1>Kyiv</h1>
+        <ul>
+          <li>Monday 12:15</li>
+        </ul>
+
         <div class="row">
+          <div class="col-6" id="temperature">
+            <img src="" alt="Sunny" />
+            12 °C | °F
+          </div>
           <div class="col-6">
-            <input type="search" placeholder="Enter city" id="city-input" />
-          </div>
-          <div class="col-3">
-            <input
-              type="submit"
-              value="Search"
-              class="form-control btn btn-primary w-100"
-            />
-          </div>
-          <div class="col-3">
-            <button class="btn btn-success w-100" id="current-location-button">
-              Current
-            </button>
+            <ul>
+              <li>Humidity: 50%</li>
+              <li>Wind: 25 m/s</li>
+            </ul>
           </div>
         </div>
-      </form>
 
-      <h1>Kyiv</h1>
-      <ul>
-        <li>Monday 12:15</li>
-      </ul>
-
-      <div class="description">
-        <div class="row">
-          <div class="col-3" id="city"></div>
-          <div class="col-3">☀</div>
-          <div class="col-6" id="temperature">°</div>
-        </div>
+        <p>Next 5 days</p>
 
         <div class="row">
-          <div class="col-3" id="date"></div>
-          <div class="col-3">Sunny day</div>
-          <div class="col-3">Humidity</div>
-          <div class="col-3" id="humidity">%</div>
+          <div class="col-2">Moday <br />⛅ <br />+14°C</div>
+          <div class="col-2">Tuesday <br />☀ <br />+16°C</div>
+          <div class="col-3">Wednesday <br />☀ <br />+20°C</div>
+          <div class="col-2">Thursday <br />🌧 <br />+14°C</div>
+          <div class="col-2">Friday <br />🌧 <br />+12°C</div>
         </div>
-
-        <div class="row">
-          <div class="col-3"></div>
-          <div class="col-3"></div>
-          <div class="col-3">Wind</div>
-          <div class="col-3" id="wind">m/s</div>
-        </div>
-      </div>
-
-      <p>Next 5 days</p>
-
-      <div class="row">
-        <div class="col-2">Moday <br />⛅ <br />+14°C</div>
-        <div class="col-2">Tuesday <br />☀ <br />+16°C</div>
-        <div class="col-3">Wednesday <br />☀ <br />+20°C</div>
-        <div class="col-2">Thursday <br />🌧 <br />+14°C</div>
-        <div class="col-2">Friday <br />🌧 <br />+12°C</div>
       </div>
     </div>
-    <p>
+
+    <small>
       <a href="https://github.com/merik19/weather-project" target="”_blank”">
         Open-source code
       </a>
       by Maryna Korniichuk
-    </p>
+    </small>
 
     <script src="index.js"></script>
   </body>
