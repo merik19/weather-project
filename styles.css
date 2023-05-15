@@ -1,5 +1,5 @@
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: sans-serif;
 }
 
 h1 {
@@ -42,14 +42,15 @@ li {
 }
 
 .weather-temperature img {
-  margin-right: 10px;
+  margin-right: 4px;
 }
 
 .weather-temperature strong {
   font-size: 60px;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 400;
   color: rgb(77, 68, 68);
+  margin-right: 0;
 }
 .weather-temperature .units {
   position: relative;
