@@ -40,16 +40,28 @@
           </div>
         </form>
 
-        <h1>Kyiv</h1>
-        <ul>
-          <li>Monday 12:15</li>
-        </ul>
+        <div class="location">
+          <h1>Kyiv</h1>
+          <ul>
+            <li>Monday 12:15</li>
+          </ul>
+        </div>
 
         <div class="row">
           <div class="col-6" id="temperature">
-            <img src="" alt="Sunny" />
-            12 °C | °F
+            <div class="d-flex weather-temperature">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="Clear"
+                id="icon"
+              />
+              <div>
+                <strong id="temperature">20</strong>
+                <span class="units">°C|°F</span>
+              </div>
+            </div>
           </div>
+
           <div class="col-6">
             <ul>
               <li>Humidity: 50%</li>
