@@ -54,7 +54,7 @@ li {
 }
 .weather-temperature .units {
   position: relative;
-  top: -32px;
+  top: -24px;
   font-size: 14px;
   font-weight: 600;
   color: rgb(77, 68, 68);
