@@ -22,6 +22,10 @@ li {
   line-height: 20px;
 }
 
+li:first-letter {
+  text-transform: capitalize;
+}
+
 .container {
   margin: 24px auto;
 
@@ -43,6 +47,8 @@ li {
 
 .weather-temperature img {
   margin-right: 4px;
+  height: 64px;
+  width: 64px;
 }
 
 .weather-temperature strong {
@@ -60,6 +66,9 @@ li {
   color: rgb(77, 68, 68);
 }
 
+.current-location-button {
+  font-size: 30px;
+}
 
 .city-search {
   margin-bottom: 18px;

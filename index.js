@@ -45,11 +45,22 @@ function displayWeatherCondition(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let apiKey = "e2ca49f28ba267a0a3202ae6eebab6dd";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayWeatherCondition);
+function search(city) {
+  let apiKey = "e2ca49f28ba267a0a3202ae6eebab6dd";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
 
-//let searchForm = document.querySelector("#search-form");
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Madrid");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
 
 //function searchCity(city) {
 //  let apiKey = "e2ca49f28ba267a0a3202ae6eebab6dd";
@@ -73,8 +84,6 @@ axios.get(apiUrl).then(displayWeatherCondition);
 //  event.preventDefault();
 //  navigator.geolocation.getCurrentPosition(searchLocation);
 //}
-
-//searchForm.addEventListener("submit", handleSubmit);
 
 //let currentLocationButton = document.querySelector("#current-location-button");
 //currentLocationButton.addEventListener("click", getCurrentLocation);
