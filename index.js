@@ -57,6 +57,20 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
+function searchLocation(position) {
+  let apiKey = "e2ca49f28ba267a0a3202ae6eebab6dd";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
 search("Madrid");
 
 let form = document.querySelector("#search-form");
