@@ -68,6 +68,13 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (14 * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
@@ -76,30 +83,5 @@ search("Madrid");
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-//function searchCity(city) {
-//  let apiKey = "e2ca49f28ba267a0a3202ae6eebab6dd";
-//  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-//  axios.get(apiUrl).then(displayWeatherCondition);
-//}
-
-//function handleSubmit(event) {
-//  event.preventDefault();
-//  let city = document.querySelector("#city-input").value;
-//  searchCity(city);
-//}
-
-//function searchLocation(position) {
-//  let apiKey = "e2ca49f28ba267a0a3202ae6eebab6dd";
-//  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-//  axios.get(apiUrl).then(displayWeatherCondition);
-//}
-
-//function getCurrentLocation(event) {
-//  event.preventDefault();
-//  navigator.geolocation.getCurrentPosition(searchLocation);
-//}
-
-//let currentLocationButton = document.querySelector("#current-location-button");
-//currentLocationButton.addEventListener("click", getCurrentLocation);
-
-//searchCity("Kyiv");
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
