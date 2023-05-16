@@ -60,7 +60,7 @@ li:first-letter {
 }
 .weather-temperature .units {
   position: relative;
-  top: -24px;
+  top: -32px;
   font-size: 14px;
   font-weight: 600;
   color: rgb(77, 68, 68);
@@ -79,3 +79,5 @@ li:first-letter {
 .city-search {
   margin-bottom: 18px;
 }
+
+a:link {text-decoration:none}
