@@ -66,18 +66,23 @@ li:first-letter {
   color: rgb(77, 68, 68);
 }
 
-.city-search {
-  margin-bottom: 18px;
+.forecast {
+  margin-top: 16px;
 }
 
-.city {
-  font-size: 30px;
-  color: green;
-  font-weight: bold;
-  border-color: blue;
+.forecast-date {
+  font-size: 16px;
+  color: black;
+  opacity: 0.9;
 }
-.city-search {
-  margin-bottom: 18px;
+
+.forecast-temperature {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.forecast-temperature-min {
+  opacity: 0.7;
 }
 
 a:link {text-decoration:none}
