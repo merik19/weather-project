@@ -22,6 +22,34 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecastBlock() {
+  let forecastBlockElement = document.querySelector("#forecast-block");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thu"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="forecast-date">${day}</div>
+        <img
+          src="http://openweathermap.org/img/wn/04d@2x.png"
+          alt=""
+          width="44"
+        />
+        <div class="forecast-temperature">
+          <span class="forecast-temperature-max">20°</span>
+          <span class="forecast-temperature-min">10°</span>
+        </div>
+      </div> 
+    `;
+  }); 
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastBlockElement.innerHTML = forecastHTML;
+}
+
 function displayWeatherCondition(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -98,3 +126,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Madrid");
+displayForecastBlock();

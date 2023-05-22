@@ -74,7 +74,7 @@ li:first-letter {
   font-size: 16px;
   color: black;
   opacity: 0.9;
-
+  ;
 }
 
 .forecast-temperature {
@@ -85,5 +85,6 @@ li:first-letter {
 .forecast-temperature-min {
   opacity: 0.7;
 }
+
 
 a:link {text-decoration:none}
