@@ -39,6 +39,7 @@ li:first-letter {
   border-radius: 10px;
   border-color: rgb(104, 104, 145);
   padding: 18px 18px;
+  background: linear-gradient(rgb(193, 222, 255), rgb(255, 255, 180));
 }
 
 .location {
@@ -68,6 +69,7 @@ li:first-letter {
 
 .forecast {
   margin-top: 16px;
+  text-align: center;
 }
 
 .forecast-date {
